@@ -45,6 +45,9 @@ class Ball(Turtle):
         self.x_move *= -1
         self.move_speed = 0.1
 
+    def speed_change(self):
+        self.move_speed *= 0.99
+
 
 # score class
 class Scoreboard(Turtle):

@@ -30,9 +30,11 @@ while game_is_on:
 
     if ball.ycor() > 290 or ball.ycor() < -290:
         ball.bounce()
+        ball.speed_change()
 
     if ball.xcor() > 350 and ball.distance(r_paddle) < 50 or ball.xcor() < -350 and ball.distance(l_paddle) < 50:
         ball.deflect()
+        ball.speed_change()
 
     if ball.xcor() > 370:
         ball.reset_position()
